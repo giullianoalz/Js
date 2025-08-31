@@ -1,0 +1,219 @@
+/*
+ * Archivo: src/App.css
+ */
+
+/* Estilos globales y reseteo */
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background-color: #f8f8f8;
+}
+
+.main-layout {
+max-width: 1300px;
+margin: 0 auto;
+padding: 1rem;
+}
+
+/* --- */
+
+/* Estilos del Navbar */
+.navbar {
+background-color: white;
+border-bottom: 1px solid #e0e0e0;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.navbar-container {
+max-width: 1300px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 1rem;
+}
+
+.navbar-left,
+.navbar-right {
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.navbar-left a,
+.navbar-right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem; /* El nuevo tamaño */
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.navbar-left a:hover,
+.navbar-right a:hover {
+color: #888;
+}
+
+.cart-link {
+position: relative;
+display: flex;
+align-items: center;
+text-decoration: none;
+color: #333;
+}
+
+.cart-count {
+position: absolute;
+top: -5px;
+right: -10px;
+background-color: #999292;
+color: white;
+border-radius: 50%;
+padding: 0.2rem 0.3rem;
+font-size: 0.75rem;
+font-weight: bold;
+line-height: 1;
+z-index: 10;
+}
+
+/* --- */
+
+/* Estilos de las tarjetas de productos */
+.products-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 20px;
+padding: 20px;
+justify-items: center;
+}
+
+.product-card-link {
+text-decoration: none;
+color: inherit;
+display: block;
+}
+
+.product-card {
+width: 100%;
+height: 450px;
+border: none;
+border-radius: 0;
+overflow: hidden;
+box-shadow: none;
+transition: transform 0.3s ease;
+display: flex;
+flex-direction: column;
+}
+
+.product-card:hover {
+transform: none;
+}
+
+.product-image {
+width: 100%;
+flex: 1;
+height: 300px;
+object-fit: cover;
+}
+
+.product-info {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px 0;
+height: 80px;
+}
+
+.product-name,
+.product-price {
+margin: 0;
+font-size: 1rem;
+font-weight: 500;
+}
+
+.product-price {
+color: #888;
+}
+
+.add-to-cart-button {
+background-color: transparent;
+color: #333;
+border: 1px solid #333;
+padding: 10px;
+border-radius: 0;
+cursor: pointer;
+font-size: 1rem;
+text-transform: uppercase;
+font-weight: 500;
+transition: all 0.2s ease;
+width: 100%;
+}
+
+.add-to-cart-button:hover {
+background-color: #333;
+color: white;
+}
+
+.product-sizes {
+display: flex;
+justify-content: center;
+gap: 10px;
+padding: 10px 0;
+width: 100%;
+}
+
+.size-button {
+background-color: transparent;
+color: #606060;
+border: 1px solid #ddd;
+padding: 8px 12px;
+border-radius: 4px;
+cursor: pointer;
+font-size: 0.9rem;
+font-weight: 500;
+transition: all 0.2s ease;
+}
+
+.size-button:hover {
+background-color: #333;
+color: white;
+border-color: #333;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Asegura que haya espacio entre los iconos */
+}
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+.navbar-left {
+display: none;
+}
+
+.navbar-right {
+gap: 10px;
+}
+
+.cart-link svg,
+.navbar-right a svg {
+font-size: 1.5rem;
+}
+
+.products-grid {
+grid-template-columns: 1fr;
+padding: 10px;
+gap: 15px;
+}
+
+.product-card {
+height: 400px;
+}
+
+.product-image {
+height: 250px;
+}
+}
