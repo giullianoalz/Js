@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'; // Cambiado de BrowserRouter a HashRouter
 import AppRoutes from './AppRoutes';
 import Navbar from './Components/Navbar';
 import './App.css';
